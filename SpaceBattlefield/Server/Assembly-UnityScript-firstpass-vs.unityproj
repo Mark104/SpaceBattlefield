@@ -147,6 +147,12 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Jboy.Core">
+ <HintPath>Assets\Jboy\Library\Jboy.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Jboy">
+ <HintPath>Assets\Jboy\Library\Jboy.dll</HintPath>
+ </Reference>
  <Reference Include="uGameDB">
  <HintPath>Assets\Plugins\uGameDB\Assembly\uGameDB.dll</HintPath>
  </Reference>
@@ -155,12 +161,6 @@
  </Reference>
  <Reference Include="uLobby">
  <HintPath>Assets\Plugins\uLobby\Assembly\uLobby.dll</HintPath>
- </Reference>
- <Reference Include="Jboy.Core">
- <HintPath>Assets\Jboy\Library\Jboy.Core.dll</HintPath>
- </Reference>
- <Reference Include="Jboy">
- <HintPath>Assets\Jboy\Library\Jboy.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

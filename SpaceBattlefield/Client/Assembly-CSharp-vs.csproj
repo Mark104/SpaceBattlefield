@@ -44,13 +44,23 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game\Scripts\FrontEnd\GameController\GC_FrontEnd.cs" />
+     <Compile Include="Assets\Game\Assets\Other\Art\FadeIn.cs" />
+     <Compile Include="Assets\Game\Assets\Other\Art\outline.cs" />
+     <Compile Include="Assets\Game\Scripts\FrontEnd\Controllers\GC_FrontEnd.cs" />
+     <Compile Include="Assets\Game\Scripts\FrontEnd\UI\EventSenders\JoinServerEvent.cs" />
      <Compile Include="Assets\Game\Scripts\FrontEnd\UI\EventSenders\LoginEvent.cs" />
      <Compile Include="Assets\Game\Scripts\FrontEnd\UI\EventSenders\RegisterEvent.cs" />
      <Compile Include="Assets\Game\Scripts\FrontEnd\UI\FrontUIManager.cs" />
      <Compile Include="Assets\Game\Scripts\FrontEnd\UI\Panels\Base\UIPanelController.cs" />
      <Compile Include="Assets\Game\Scripts\FrontEnd\UI\Panels\PnlLogin.cs" />
+     <Compile Include="Assets\Game\Scripts\FrontEnd\UI\Panels\PnlTop.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\JoinTeam.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\GameUIManager.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\Base\pnlGameTeams.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\Base\pnlGameTop.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" />
+     <Compile Include="Assets\Game\Scripts\Shared\Utility\UISpinner.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DragDropContainer.cs" />

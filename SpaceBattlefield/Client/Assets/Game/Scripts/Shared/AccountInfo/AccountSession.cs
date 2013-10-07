@@ -17,6 +17,8 @@ public class AccountSession : uLink.MonoBehaviour {
 	
 	Account myAccount;
 	
+	public string _AccountName;
+	
 	public uLink.BitStream shipCode;
 
 	// Use this for initialization
@@ -49,6 +51,7 @@ public class AccountSession : uLink.MonoBehaviour {
 	public void Login (string _Username, string _Password)
 	{
 		AccountManager.LogIn(_Username,_Password);
+		_AccountName = _Username;
 	}
 	
 	public void Register (string _Username, string _Password)
@@ -56,6 +59,11 @@ public class AccountSession : uLink.MonoBehaviour {
 		AccountManager.RegisterAccount(_Username,_Password);
 	}
 	
+	public void JoinServer(string _Host,int _Port)
+	{
+		//uLink.Network.Connect("25.150.103.245",_Port);
+		uLink.Network.Connect("192.168.0.3",_Port);
+	}
 
 	
 	private void uLobby_OnConnected()
@@ -94,7 +102,7 @@ public class AccountSession : uLink.MonoBehaviour {
 	
 	IEnumerator  LoadLevelInBackground()
 	{
-		//loadingScreen = Instantiate(Resources.Load("LoadingScreen")) as GameObject;
+		loadingScreen = Instantiate(Resources.Load("LoadingScreen")) as GameObject;
 		
 		DontDestroyOnLoad(loadingScreen);
 		

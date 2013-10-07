@@ -4,11 +4,12 @@ using System.Collections;
 public class FrontUIManager : MonoBehaviour {
 	
 	public PnlLogin _PnlLogin;
+	public PnlTop _PnlTop;
 	
 	public void LogedIn()
 	{
 		_PnlLogin.ChangeHideState();
-		
+		_PnlTop.ChangeHideState();
 	}
 
 	// Use this for initialization

@@ -139,6 +139,12 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Jboy.Core">
+ <HintPath>Assets\Jboy\Library\Jboy.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Jboy">
+ <HintPath>Assets\Jboy\Library\Jboy.dll</HintPath>
+ </Reference>
  <Reference Include="uLinkEditor">
  <HintPath>Assets\Plugins\Editor\uLink\Assembly\uLinkEditor.dll</HintPath>
  </Reference>
@@ -153,12 +159,6 @@
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="Jboy.Core">
- <HintPath>Assets\Jboy\Library\Jboy.Core.dll</HintPath>
- </Reference>
- <Reference Include="Jboy">
- <HintPath>Assets\Jboy\Library\Jboy.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
