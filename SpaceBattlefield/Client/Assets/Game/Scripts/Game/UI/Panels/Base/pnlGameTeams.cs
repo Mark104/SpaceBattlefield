@@ -1,15 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class pnlGameTeams : MonoBehaviour {
+public class pnlGameTeams : UIPanelController {
 
-	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		
+		hidePosition = new Vector3(0,-1400,0);
+		showPosition = new Vector3(0,0,0);
+		currentlyHidden = false;
+		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

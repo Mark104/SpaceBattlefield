@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class GameUIManager : MonoBehaviour {
+	
+	public pnlGameTeams _GameTeams;
 
 	// Use this for initialization
 	void Start () {

@@ -107,25 +107,33 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	
 	public void JoinAttempt (byte _ID)
 	{
-		if(_ID == 0) // is red
+		if(currentPlayerState == PlayerState.TEAMSELECT)
 		{
-			networkView.RPC("AddToRed",uLink.RPCMode.Server);
-		}
-		else if (_ID == 1) // is blue
-		{
-			networkView.RPC("AddToBlue",uLink.RPCMode.Server);
-		}
-		else if (_ID == 2) // is green
-		{
-			networkView.RPC("AddToGreen",uLink.RPCMode.Server);
+			if(_ID == 0) // is red
+			{
+				networkView.RPC("AddToRed",uLink.RPCMode.Server);
+			}
+			else if (_ID == 1) // is blue
+			{
+				networkView.RPC("AddToBlue",uLink.RPCMode.Server);
+			}
+			else if (_ID == 2) // is green
+			{
+				networkView.RPC("AddToGreen",uLink.RPCMode.Server);
+			}
 		}
 	}
 	
 	[RPC]
 	void TeamSet(byte _ID)
 	{
+		
+		print ("Team set");
 		playerTeam = _ID;
 		PlayerStateChange(PlayerState.TEAMASSIGNED);
+		
+		UI._GameTeams.ChangeHideState();
+		
 	}
 	
 	[RPC]
