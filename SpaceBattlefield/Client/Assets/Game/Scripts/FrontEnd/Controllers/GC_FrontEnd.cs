@@ -13,6 +13,7 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	FrontUIManager UI;
 	
 	IEnumerable<ServerInfo> servers;
+
 	
 	enum GameState
 	{
@@ -23,11 +24,16 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		IDLE
 	} GameState	currentServerState = GameState.WAITINGFORPLAYERS;
 		
-		
+	float botDelayTimer = 0;
+
 	
 
 	// Use this for initialization
 	void Start () {
+		
+		
+		
+		
 		
 		UI = GameObject.FindGameObjectWithTag("UIManager").GetComponent<FrontUIManager>();
 		
@@ -49,9 +55,11 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 			AS = tmpObj.AddComponent<AccountSession>();
 			AS.EnteredWaitingRoom(this);
 			
-			uLink.NetworkViewID tmpId = new uLink.NetworkViewID(0);
+			uLink.NetworkViewID tmpId = new uLink.NetworkViewID(1);
 			
-			tmpObj.AddComponent<uLink.NetworkView>().SetManualViewID(0);
+			tmpObj.AddComponent<uLink.NetworkView>().SetManualViewID(1);
+			
+			
 		}
 		else
 		{
@@ -61,6 +69,40 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 			UI._PnlTop.SkipPanel();
 			
 		}
+		
+		string [] args = System.Environment.GetCommandLineArgs();
+		
+		bool nextRead = false;
+		
+		
+		foreach(string arg in args)
+		{
+			if(nextRead == false)
+			{
+				Debug.Log("Command args are " + arg);
+				
+				if(arg == "-botname")
+				{
+					nextRead = true;
+					
+				}
+			}
+			else
+			{
+				AS.isBot = true;
+				AS.botName = arg;
+				
+				Debug.Log("Bot loaded with name " + arg);
+				
+				AttemptLogin(AS.botName,"");
+				
+			}
+		}
+		
+		
+		
+		//AS.isBot = true;
+		//AS.botName = "Mark-Bot";
 		
 		
 		
@@ -78,6 +120,25 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		botDelayTimer+= Time.deltaTime;
+		
+		if(!AS.LogedIn)
+		{
+			if(botDelayTimer > 2 &&botDelayTimer < 3)
+			{
+				Register(AS.botName,"");
+				botDelayTimer= 3;
+				
+			}
+			else if (botDelayTimer > 6)
+			{
+				AttemptLogin(AS.botName,"");
+				botDelayTimer= 0;
+				
+			}
+		}
+	
 	
 	}
 	
@@ -102,6 +163,8 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		
 		UI.LogedIn();
 		
+		
+		
 	}
 	
 	void OnServerDataUpdated (ServerInfo _Server)
@@ -124,6 +187,13 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		{
 			
 			UI._PnlTop.SetMainTxt("Match in progress");
+			
+			if(AS.isBot && botDelayTimer > 6)
+			{
+		
+				JoinServer();
+			}
+			
 		}
 		else if (_NewState == GameState.RESULTS)
 		{
@@ -134,6 +204,13 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		{
 			UI._PnlTop.SetJoinButtonState(true);
 			UI._PnlTop.SetMainTxt("Match starting in");
+			
+			if(AS.isBot && botDelayTimer > 6)
+			{
+		
+				JoinServer();
+			}
+				
 		}
 		else if (_NewState == GameState.WAITINGFORPLAYERS)
 		{

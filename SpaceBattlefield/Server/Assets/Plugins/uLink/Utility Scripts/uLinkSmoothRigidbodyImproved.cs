@@ -63,11 +63,6 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 	// the clients can see the accurate position of this object as fast as possible. 
 	// This value is only used in the proxy and owner, not creator.
 	public float maxDistanceError = 8f;
-	float timeTillNextInput;
-	
-	bool moveState;
-	
-	Vector3 currentpos;
 
 	// This is the timeframe used in clients to show object movements a short time after the server.
 	// as long the client gets state sync packets from the server inside this timeframe, the client
@@ -128,8 +123,6 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 			//This code is executed in the clients
 			mostCurrentReceivedState.pos = stream.Read<Vector3>();
 			mostCurrentReceivedState.rot = stream.Read<Quaternion>(); 
-			currentpos = mostCurrentReceivedState.pos;
-			
 			
 			mostCurrentReceivedState.timestamp = info.timestamp + (interpolationBackTimeMs / 1000);
 		}
@@ -142,7 +135,6 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 			firstState = false;
 			targetDistance = 0;
 			transform.position = mostCurrentReceivedState.pos;
-			
 			return;
 		}
 
@@ -196,77 +188,40 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 			transform.position = target;
 		}
 	}
-	
-	
-	void Update()
-	{
-		/*
-		if(networkView.isOwner)
-		{
-			float distance = Vector3.Distance(transform.position,currentpos);
-			
-			transform.position = Vector3.Lerp(transform.position,currentpos, Time.deltaTime * (distance * 1));
-		}
-		*/
-		
-		if(!networkView.isOwner)
-		{
-		
-			//return;
-		
-			
-			if (networkView.viewID == uLink.NetworkViewID.unassigned)
-			{
-				return;
-			}
-	
-			//Only execute the smooth rotation for proxies and owner, not authority
-			if (networkView.hasAuthority)
-			{
-				return;
-			}
-			
-			//No state sync message has arrived to this client => Do nothing.
-			if (mostCurrentReceivedState.timestamp == 0)
-			{
-				return;
-			}
-			
-		
-			UpdateState();
-			
-		
-	
-			curRot = Quaternion.Lerp(targetRot, curRot, rotationDamping);
-			transform.rotation = curRot;
-				
-			
-		
-	
-			if (targetDistance < 0.01)
-			{
-			   // If we are this close to end position, don't move at all to avoid "flickering".
-				return;
-			}
-			
-			
-			rigidbody.velocity = optimalSmoothVelocity;
-		}
-		
-		
-		
-	}
+
 
 	void FixedUpdate()
 	{
-	
-		
-		
+		if (networkView.viewID == uLink.NetworkViewID.unassigned)
+		{
+			return;
+		}
 
+		// Only execute the smooth rotation for proxies and owner, not authority
+		if (networkView.hasAuthority)
+		{
+			return;
+		}
+
+		//No state sync message has arrived to this client => Do nothing.
+		if (mostCurrentReceivedState.timestamp == 0)
+		{
+			return;
+		}
 		
+		UpdateState();
+
+		curRot = Quaternion.Lerp(targetRot, curRot, rotationDamping);
+		transform.rotation = curRot;
+
+		if (targetDistance < 0.01)
+		{
+		   // If we are this close to end position, don't move at all to avoid "flickering".
+			return;
+		}
+
+		rigidbody.velocity = optimalSmoothVelocity;
 	}
-	
-	
 	
 	[RPC]
 	public void InputRecived(Vector3 velocity,Quaternion rot,uLink.NetworkMessageInfo info)
@@ -285,8 +240,5 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 		
 
 	}
-	
-	
-	
 
 }

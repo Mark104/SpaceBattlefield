@@ -19,11 +19,13 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	//Initilised values ----------------------------------------
 	
 	short minimumPlayers = 2;
-	short startGameTime = 2; // In seconds
-	short roundTime = 6; // In seconds
+	short startGameTime = 20; // In seconds
+	short roundTime = 10; // In seconds
 	short resultsTime = 2; // In seconds
 	short idleTIme = 6; // In seconds
 	
+	
+	public GameObject shipPlacement;
 	
 	string ServerName = "GameServer"; 
 	
@@ -63,6 +65,12 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	Dictionary<int,NetworkProfile> greenTeam = new Dictionary<int, NetworkProfile>();
 	
 	Dictionary<int,NetworkProfile> playerList = new Dictionary<int, NetworkProfile>();
+	
+	Dictionary<int,Vector3> playerSpawnBuffer = new Dictionary<int, Vector3>();
+	
+	List<GameObject> placements = new List<GameObject>();
+	
+	
 	
 	void UpdateServerListing () {
 		
@@ -124,6 +132,16 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		else if (_SwitchedState == GameState.PLAYING) // we must have started
 		{
 			currentGameTimer = (short)roundTime;
+			SpawnShips();
+			
+			foreach(GameObject _Ship in placements)
+			{
+				
+				uLink.Network.Destroy(	_Ship);
+				
+			}
+			
+			placements.Clear();
 			//currentGameTimer *= 60;
 			
 		}
@@ -249,12 +267,75 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		//Lobby.RPC("PassOnDebugInfo",LobbyPeer.lobby,_Message,networkView.owner.id);
 	}
 	
+	void SpawnShips()
+	{
+		foreach(KeyValuePair<int,Vector3> _value in playerSpawnBuffer)
+		{
+			int tempKey = _value.Key;
+			Quaternion rotation = Quaternion.identity;
+			if(playerList[tempKey].team == 1)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,90,0));
+			}
+			else if (playerList[tempKey].team == 2)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,-90,0));
+			}
+			else if (playerList[tempKey].team == 3)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,0,0));
+			}
+			uLink.Network.Instantiate(playerList[tempKey].player,"otherShip","ownerShip","serverShip",_value.Value,rotation,0,playerList[tempKey].team);
+			
+		}
+		
+		playerSpawnBuffer.Clear();
+	}
+	
 	
 	[RPC]
-	void EnterGame(uLink.NetworkMessageInfo _Info)
+	void SpawnShip(Vector3 _Position,uLink.NetworkMessageInfo _Info)
 	{
-		uLink.Network.Instantiate(_Info.sender,"Proxy","Owner","Creator",Vector3.zero,Quaternion.identity,1);
-	
+		
+		if(currentGameState == GameState.STARTING)
+		{
+			playerSpawnBuffer.Add(_Info.sender.id,_Position);
+			
+			Quaternion rotation = Quaternion.identity;
+			if(playerList[_Info.sender.id].team == 1)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,90,0));
+			}
+			else if (playerList[_Info.sender.id].team == 2)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,-90,0));
+			}
+			else if (playerList[_Info.sender.id].team == 3)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,0,0));
+			}
+			
+			GameObject tmp = uLink.Network.Instantiate(networkView.owner,"shipPlacement","shipPlacement","shipPlacement",_Position,rotation,0);
+			placements.Add(tmp);
+			
+		}
+		else if (currentGameState == GameState.PLAYING)
+		{
+			Quaternion rotation = Quaternion.identity;
+			if(playerList[_Info.sender.id].team == 1)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,90,0));
+			}
+			else if (playerList[_Info.sender.id].team == 2)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,-90,0));
+			}
+			else if (playerList[_Info.sender.id].team == 3)
+			{
+				rotation = Quaternion.Euler(new Vector3(0,0,0));
+			}
+			uLink.Network.Instantiate(_Info.sender,"otherShip","ownerShip","serverShip",_Position,rotation,0,playerList[_Info.sender.id].team);
+		}
 	}
 	
 	
@@ -274,6 +355,8 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	[RPC]	
 	void UserConnected (string _Name,uLink.NetworkMessageInfo _Info)
 	{	
+		
+		print ("User" + _Name + " connected");
 		NetworkProfile tempProf = new NetworkProfile();
 
 		tempProf.name = _Name;
@@ -338,7 +421,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		
 		playerList[_Info.sender.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",uLink.RPCMode.Others,currentTeam);
+		networkView.RPC("TeamSet",_Info.sender,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 		
@@ -358,7 +441,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		
 		playerList[_Info.sender.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",uLink.RPCMode.Others,currentTeam);
+		networkView.RPC("TeamSet",_Info.sender,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 		
@@ -378,7 +461,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		
 		playerList[_Info.sender.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",uLink.RPCMode.Others,currentTeam);
+		networkView.RPC("TeamSet",_Info.sender,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 		

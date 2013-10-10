@@ -4,6 +4,7 @@ using System.Collections;
 public class GameUIManager : MonoBehaviour {
 	
 	public pnlGameTeams _GameTeams;
+	public pnlGameUI _GameUI;
 
 	// Use this for initialization
 	void Start () {
