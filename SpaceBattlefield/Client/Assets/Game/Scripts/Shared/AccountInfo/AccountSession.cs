@@ -20,6 +20,19 @@ public class AccountSession : uLink.MonoBehaviour {
 	public string _AccountName;
 	
 	public uLink.BitStream shipCode;
+	
+	int incPort;
+	
+	public bool connectedToGameServer = false;
+	
+	public bool isBot = false;
+	
+	public string botName;
+	
+	public bool LogedIn = false;
+	
+	
+	
 
 	// Use this for initialization
 	void Start () {
@@ -50,8 +63,8 @@ public class AccountSession : uLink.MonoBehaviour {
 	}
 	public void Login (string _Username, string _Password)
 	{
-		AccountManager.LogIn(_Username,_Password);
 		_AccountName = _Username;
+		AccountManager.LogIn(_Username,_Password);
 	}
 	
 	public void Register (string _Username, string _Password)
@@ -62,18 +75,23 @@ public class AccountSession : uLink.MonoBehaviour {
 	public void JoinServer(string _Host,int _Port)
 	{
 		//uLink.Network.Connect("25.150.103.245",_Port);
-		uLink.Network.Connect("192.168.0.3",_Port);
+		StartCoroutine(LoadLevelInBackground());
+		incPort= _Port;
+		
 	}
 
 	
 	private void uLobby_OnConnected()
 	{
 		print ("Connected to MasterServer");
+		
 	}
 	
 	private void OnAccountLoggedIn(Account _Account)
 	{
 		FrontEndGC.LogedIn();
+		
+		LogedIn = true;
 		
 		myAccount = _Account;
 	}
@@ -109,12 +127,16 @@ public class AccountSession : uLink.MonoBehaviour {
 		yield return Application.LoadLevelAsync(1);
 		
 		Destroy(loadingScreen);
+			
+		uLink.Network.Connect("192.168.0.2",incPort);
 	}
 	
 	void uLink_OnConnectedToServer()
 	{
 			
-		StartCoroutine(LoadLevelInBackground());
+		connectedToGameServer = true;
+		
+		GameObject.FindGameObjectWithTag("GameController").GetComponent<GC_InGameController>().Initalize();
 	}
 	
 	void uLink_OnDisconnectedFromServer(uLink.NetworkDisconnection mode)

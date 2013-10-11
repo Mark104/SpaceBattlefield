@@ -13,6 +13,14 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	short roundTime;
 	short resultsTime;
 	
+	private GameObject placement;
+	
+	bool setupFinished = false;
+	
+	float botReactionTimer = 0;
+	
+	
+	
 	enum GameState
 	{
 		WAITINGFORPLAYERS,
@@ -33,6 +41,13 @@ public class GC_InGameController : uLink.MonoBehaviour {
 
 	byte playerTeam = 4; // 0 is unassigned / 1 is red / 2 is green / 3 is red // 4 is noteam
 	
+	public void Initalize()
+	{
+		print ("Sending connect message with name " + AS._AccountName);
+		networkView.RPC("UserConnected",uLink.RPCMode.Server,AS._AccountName);
+		setupFinished = true;
+		botReactionTimer= 0;
+	}
 	
 	void PlayerStateChange(PlayerState _NewState)
 	{
@@ -63,16 +78,18 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	{
 		if(_NewState == GameState.PLAYING)
 		{
-		
+			UI._GameUI.txtStatus.text = "Till match ends";
 			
 		}
 		else if (_NewState == GameState.RESULTS)
 		{
-			
+			UI._GameUI.txtStatus.text = "Till match closes";
 			
 		}
 		else if (_NewState == GameState.STARTING)
 		{
+			UI._GameUI.txtStatus.text = "Till match starts";
+			
 			
 		}
 		else if (_NewState == GameState.WAITINGFORPLAYERS)
@@ -101,8 +118,80 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	
 	void Start () {
 			
-		networkView.RPC("UserConnected",uLink.RPCMode.Server,AS._AccountName);
 		
+		
+	}
+	
+	void Update () {
+		
+		botReactionTimer+= Time.deltaTime;
+		
+		if(!setupFinished)
+		{
+			
+		}
+		else
+		{
+			if(AS.isBot && botReactionTimer > 2)
+			{
+				if(currentPlayerState == PlayerState.TEAMSELECT)
+				{
+					
+					JoinAttempt((byte)Random.Range(1,3));
+					botReactionTimer = 0;
+					
+				}	
+			}
+		}
+		
+		if(currentPlayerState == PlayerState.TEAMASSIGNED)
+		{
+			if(AS.isBot)
+			{
+				RaycastHit hit;
+				
+				Ray ray = Camera.main.camera.ScreenPointToRay(new Vector3(Screen.width / 2 + Random.Range(-50,50), Screen.height / 2 + Random.Range(-50,50), 0));
+				
+				if(Physics.Raycast(ray, out hit))
+				{
+					if (hit.collider.gameObject.CompareTag("DeploymentArea"))
+					{
+						
+						networkView.RPC("SpawnShip",uLink.RPCMode.Server,hit.point);
+						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
+					}
+	
+				}
+				
+			}
+		
+			if(Input.GetMouseButtonDown(0))
+			{
+				RaycastHit hit;
+				Ray ray = Camera.main.camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				
+				Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
+				
+				if(Physics.Raycast(ray, out hit))
+				{
+					if (hit.collider.gameObject.CompareTag("DeploymentArea"))
+					{
+						
+						networkView.RPC("SpawnShip",uLink.RPCMode.Server,hit.point);
+						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
+					}
+	
+				}
+			}
+		}
+		
+		currentTimer-= Time.deltaTime;
+		
+		if(currentTimer < 0)
+			currentTimer =0;
+		
+		UI._GameUI.txtTimer.text = "" + (float)currentTimer;
+
 	}
 	
 	public void JoinAttempt (byte _ID)
@@ -128,11 +217,29 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	void TeamSet(byte _ID)
 	{
 		
-		print ("Team set");
+		print ("Team set to " + _ID);
 		playerTeam = _ID;
 		PlayerStateChange(PlayerState.TEAMASSIGNED);
 		
 		UI._GameTeams.ChangeHideState();
+		
+		if(playerTeam == 1)
+		{
+			Camera.main.transform.position = new Vector3(-40,20,0); // move to red spawn
+			
+		}
+		else if (playerTeam == 2)
+		{
+			Camera.main.transform.position = new Vector3(40,20,0); // move to green spawn
+			
+		}
+		else if (playerTeam == 3)
+		{
+			
+			Camera.main.transform.position = new Vector3(0,20,-40); // move to blue spawn
+			
+		}
+		
 		
 	}
 	
@@ -158,22 +265,20 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	[RPC]
 	void ServerStateChanged (byte _ServerState,uLink.NetworkMessageInfo _Info)
 	{
-		print ("Got server changed rpc");
+		print ("Got server changed rpc " + _ServerState);
 		StateChanged((GameState)_ServerState);
 		
 		if(currentServerState == GameState.STARTING)
 		{
-			//UI._GameUIPanel.GameStatus.text = "Till match starts";
 			currentTimer = startingTime - (uLink.Network.time - _Info.timestamp);
 		}
 		else if (currentServerState == GameState.PLAYING)
 		{
-			//UI._GameUIPanel.GameStatus.text = "Till match ends";
 			currentTimer = roundTime - (uLink.Network.time - _Info.timestamp);
 		}
 		else if (currentServerState == GameState.RESULTS)
 		{
-			//UI._GameUIPanel.GameStatus.text = "Till next round";
+			UI._GameTeams.ChangeHideState();
 			currentTimer = resultsTime - (uLink.Network.time - _Info.timestamp);
 		}
 		
