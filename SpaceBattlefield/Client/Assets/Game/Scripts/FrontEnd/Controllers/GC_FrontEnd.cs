@@ -49,9 +49,9 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 			AS = tmpObj.AddComponent<AccountSession>();
 			AS.EnteredWaitingRoom(this);
 			
-			uLink.NetworkViewID tmpId = new uLink.NetworkViewID(0);
+			uLink.NetworkViewID tmpId = new uLink.NetworkViewID(1);
 			
-			tmpObj.AddComponent<uLink.NetworkView>().SetManualViewID(0);
+			tmpObj.AddComponent<uLink.NetworkView>().SetManualViewID(1);
 		}
 		else
 		{
