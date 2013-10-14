@@ -83,6 +83,8 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 	private float targetDistance;
 	private Vector3 optimalSmoothVelocity;
 	private bool firstState = true;
+	
+	private Vector3 velocity;
 
 	private class State
 	{
@@ -192,6 +194,7 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 
 	void FixedUpdate()
 	{
+		print ("My Velocity is " + rigidbody.velocity);
 		if (networkView.viewID == uLink.NetworkViewID.unassigned)
 		{
 			return;
@@ -224,20 +227,17 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 	}
 	
 	[RPC]
-	public void InputRecived(Vector3 velocity,Quaternion rot,uLink.NetworkMessageInfo info)
+	public void InputRecived(Vector3 velocity,Vector3 _Position,Quaternion rot,uLink.NetworkMessageInfo info)
 	{
+		velocity = velocity;
+		transform.position = _Position;
+		transform.rotation = rot;
 		
 		
 		//	print ("gotInput " + velocity.magnitude);
 			
-			rigidbody.AddForce(velocity);
-		
-			
-		
-			transform.rotation = rot; 
-		
-		
-		
+		//rigidbody.AddForce(velocity);
+	
 
 	}
 

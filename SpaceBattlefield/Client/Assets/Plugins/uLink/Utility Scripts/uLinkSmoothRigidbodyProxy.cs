@@ -110,7 +110,6 @@ public class uLinkSmoothRigidbodyProxy : uLink.MonoBehaviour
 
 	void uLink_OnSerializeNetworkView(uLink.BitStream stream, uLink.NetworkMessageInfo info)
 	{
-		print ("Got serialization");
 		if (stream.isWriting)
 		{
 			// Send information to all proxies and the owner (clients)

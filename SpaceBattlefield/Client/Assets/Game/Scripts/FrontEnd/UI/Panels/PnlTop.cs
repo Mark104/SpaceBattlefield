@@ -2,6 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 public class PnlTop : UIPanelController {
+	
+	
+	public UILabel _TxtTimer;
+	
+	public UILabel _TxtPlyrCount;
 
 	void Awake () {
 		

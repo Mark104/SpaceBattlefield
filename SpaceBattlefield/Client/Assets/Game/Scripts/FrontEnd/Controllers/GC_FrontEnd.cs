@@ -13,6 +13,8 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	FrontUIManager UI;
 	
 	IEnumerable<ServerInfo> servers;
+	
+	private float stateTimer;
 
 	
 	enum GameState
@@ -36,6 +38,8 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		
 		
 		UI = GameObject.FindGameObjectWithTag("UIManager").GetComponent<FrontUIManager>();
+		
+		UI._PnlTop.SetJoinButtonState(false);
 		
 			
 		uLobby.ServerRegistry.OnServerDataUpdated += OnServerDataUpdated;
@@ -123,7 +127,7 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		
 		botDelayTimer+= Time.deltaTime;
 		
-		if(!AS.LogedIn)
+		if(!AS.LogedIn && AS.isBot)
 		{
 			if(botDelayTimer > 2 &&botDelayTimer < 3)
 			{
@@ -137,6 +141,18 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 				botDelayTimer= 0;
 				
 			}
+		}
+		
+		stateTimer -= Time.deltaTime;
+		if(stateTimer > 0)
+		{
+			UI._PnlTop._TxtTimer.text = "" + (int)stateTimer;
+			
+		}
+		else
+		{
+			stateTimer = 0;
+			
 		}
 	
 	
@@ -173,8 +189,12 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 		uLink.BitStream stream =_Server.data.ReadBitStream();
 		
 		short playerCount = stream.ReadInt16(); // Read the current player count
+		
+		UI._PnlTop._TxtPlyrCount.text = "" + playerCount + " Players";
 
 		byte gameState = stream.ReadByte(); // Read the current game state
+		
+		stateTimer = stream.ReadSingle();
 		
 		ServerStateChanged((GameState)gameState);
 		
@@ -185,7 +205,7 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	{
 		if(_NewState == GameState.PLAYING)
 		{
-			
+			UI._PnlTop.SetJoinButtonState(true);
 			UI._PnlTop.SetMainTxt("Match in progress");
 			
 			if(AS.isBot && botDelayTimer > 6)
@@ -229,9 +249,6 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	
 	public void JoinServer()
 	{
-		
-		
-		
 		servers = ServerRegistry.GetServers();
 		
 		foreach(ServerInfo _Info in servers)
@@ -239,7 +256,6 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 			print ("Attempting Connect with" + _Info.host + " on port " + _Info.port);
 			AS.JoinServer(_Info.host,_Info.port);
 		}
-		
 	}
 	
 }

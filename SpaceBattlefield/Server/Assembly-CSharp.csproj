@@ -44,7 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game\Scripts\MainGameServer\EntitySystems\Ship\Base\ShipEntity.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\EntitySystems\Ship\FighterEntity.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\GameController\GC_MainGameServer.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\Base\ServerFireController.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\Guns\Base\Armament.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\Guns\BasicCannon.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\WSFighterClaw.cs" />
      <Compile Include="Assets\Game\Scripts\MasterServer\GC_MasterServer.cs" />
      <None Include="Assets\Jboy\Library\Jboy.xml" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />

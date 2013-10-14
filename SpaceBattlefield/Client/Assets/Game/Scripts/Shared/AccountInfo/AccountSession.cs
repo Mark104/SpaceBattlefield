@@ -31,6 +31,8 @@ public class AccountSession : uLink.MonoBehaviour {
 	
 	public bool LogedIn = false;
 	
+	public byte currentTeam = 0;
+	
 	
 	
 

@@ -73,13 +73,16 @@ public class BasicFighterMovement : uLink.MonoBehaviour {
 		
 		rot = Quaternion.Lerp(rot,Quaternion.LookRotation(relativeVector,transform.up),Time.deltaTime * 3);
 		
-		rigidbody.AddForce(vel);
+		rigidbody.AddForce(vel,ForceMode.Force);
 		
 		if(currentSendTimer > 0.1f)
 		{
-			networkView.RPC("InputRecived",uLink.RPCMode.Server,storedForce,rot);
+			
+			//networkView.RPC("InputRecived",uLink.RPCMode.Server,storedForce,rot);
+			networkView.RPC("InputRecived",uLink.RPCMode.Server,rigidbody.velocity,transform.position,rot);
 			storedForce = Vector3.zero;
 			currentSendTimer = 0;
+			
 		}
 		else
 		{
@@ -111,33 +114,5 @@ public class BasicFighterMovement : uLink.MonoBehaviour {
 		
 		
 	}
-	
-	void uLink_OnNetworkInstantiate(byte _Team) {
-		
-		switch(_Team)
-		{
-			case 1:
-			
-				print ("I'm red");
-			
-				rot = Quaternion.Euler(0,90,0);
-				
-				break;
-			case 2:
-			
-				print ("I'm green");
-			
-				rot = Quaternion.Euler(0,-90,0);
-				
-				break;
-			case 3:
-				
-				print ("I'm blue");
-			
-				rot = Quaternion.Euler(0,0,0);
-				
-				break;
-		}
-		
-	}
+
 }

@@ -41,11 +41,36 @@ public class GC_InGameController : uLink.MonoBehaviour {
 
 	byte playerTeam = 4; // 0 is unassigned / 1 is red / 2 is green / 3 is red // 4 is noteam
 	
+	public void Respawn()
+	{
+		
+		PlayerStateChange(PlayerState.TEAMASSIGNED);
+		
+		if(playerTeam == 1)
+		{
+			Camera.main.transform.position = new Vector3(-40,20,0); // move to red spawn
+			
+		}
+		else if (playerTeam == 2)
+		{
+			Camera.main.transform.position = new Vector3(40,20,0); // move to green spawn
+			
+		}
+		else if (playerTeam == 3)
+		{
+			
+			Camera.main.transform.position = new Vector3(0,20,-40); // move to blue spawn
+			
+		}
+	}
+	
 	public void Initalize()
 	{
 		print ("Sending connect message with name " + AS._AccountName);
 		networkView.RPC("UserConnected",uLink.RPCMode.Server,AS._AccountName);
 		setupFinished = true;
+		
+		print ("Called");
 		botReactionTimer= 0;
 	}
 	
@@ -156,8 +181,8 @@ public class GC_InGameController : uLink.MonoBehaviour {
 				{
 					if (hit.collider.gameObject.CompareTag("DeploymentArea"))
 					{
-						
-						networkView.RPC("SpawnShip",uLink.RPCMode.Server,hit.point);
+						Vector3 twoPointVector = new Vector3(hit.point.x,0,hit.point.z);
+						networkView.RPC("SpawnShip",uLink.RPCMode.Server,twoPointVector);
 						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
 					}
 	
@@ -176,8 +201,8 @@ public class GC_InGameController : uLink.MonoBehaviour {
 				{
 					if (hit.collider.gameObject.CompareTag("DeploymentArea"))
 					{
-						
-						networkView.RPC("SpawnShip",uLink.RPCMode.Server,hit.point);
+						Vector3 twoPointVector = new Vector3(hit.point.x,0,hit.point.z);
+						networkView.RPC("SpawnShip",uLink.RPCMode.Server,twoPointVector);
 						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
 					}
 	
@@ -216,6 +241,8 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	[RPC]
 	void TeamSet(byte _ID)
 	{
+		
+		AS.currentTeam = _ID;
 		
 		print ("Team set to " + _ID);
 		playerTeam = _ID;
