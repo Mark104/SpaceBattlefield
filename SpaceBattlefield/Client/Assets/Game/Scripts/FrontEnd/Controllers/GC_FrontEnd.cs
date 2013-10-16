@@ -33,10 +33,6 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		
-		
-		
-		
 		UI = GameObject.FindGameObjectWithTag("UIManager").GetComponent<FrontUIManager>();
 		
 		UI._PnlTop.SetJoinButtonState(false);

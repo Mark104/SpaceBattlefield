@@ -60,9 +60,11 @@
      <Compile Include="Assets\Game\Scripts\Game\EntitySystems\Ship\FighterEntity.cs" />
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\BasicFighterMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\JoinTeam.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\SelectShip.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\GameUIManager.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\Base\pnlGameTeams.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\Base\pnlGameUI.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlDevShipPicker.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameTeams.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameUI.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" />

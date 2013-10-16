@@ -3,14 +3,14 @@ using System.Collections;
 
 public class JoinTeam : MonoBehaviour {
 	
-	public byte teamId;
+	public byte teamID;
 
 
 	public void OnClick()
 	{
 		
 			
-		GameObject.FindGameObjectWithTag("GameController").GetComponent<GC_InGameController>().JoinAttempt(teamId);
+		GameObject.FindGameObjectWithTag("GameController").GetComponent<GC_InGameController>().JoinAttempt(teamID);
 
 	}
 }

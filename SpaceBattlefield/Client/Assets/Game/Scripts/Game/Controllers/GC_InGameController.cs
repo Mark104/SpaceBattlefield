@@ -19,8 +19,6 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	
 	float botReactionTimer = 0;
 	
-	
-	
 	enum GameState
 	{
 		WAITINGFORPLAYERS,
@@ -34,6 +32,7 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	{
 		TEAMSELECT,
 		TEAMASSIGNED,
+		SHIPASSIGNMENT,
 		AWAITINGDEPLOYMENT,
 		DEPLOYED,
 	} PlayerState	currentPlayerState = PlayerState.TEAMSELECT;
@@ -64,6 +63,12 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		}
 	}
 	
+	public void AttemptShipSelection(byte _ID)
+	{
+		networkView.RPC("ShipSelection",uLink.RPCMode.Server,_ID);
+		UI._DevShipPicker.ChangeHideState();
+	}
+	
 	public void Initalize()
 	{
 		print ("Sending connect message with name " + AS._AccountName);
@@ -86,6 +91,10 @@ public class GC_InGameController : uLink.MonoBehaviour {
 			
 			
 		}
+		else if (_NewState == PlayerState.SHIPASSIGNMENT)
+		{
+			UI._DevShipPicker.ChangeHideState();
+		}
 		else if (_NewState == PlayerState.AWAITINGDEPLOYMENT)
 		{
 			
@@ -95,6 +104,8 @@ public class GC_InGameController : uLink.MonoBehaviour {
 			
 			
 		}
+		
+		print ("State set to " + _NewState);
 		currentPlayerState = _NewState;
 		
 	}
@@ -169,8 +180,9 @@ public class GC_InGameController : uLink.MonoBehaviour {
 			}
 		}
 		
-		if(currentPlayerState == PlayerState.TEAMASSIGNED)
+		if(currentPlayerState == PlayerState.AWAITINGDEPLOYMENT)
 		{
+			print ("Awaiting deploy");
 			if(AS.isBot)
 			{
 				RaycastHit hit;
@@ -183,7 +195,7 @@ public class GC_InGameController : uLink.MonoBehaviour {
 					{
 						Vector3 twoPointVector = new Vector3(hit.point.x,0,hit.point.z);
 						networkView.RPC("SpawnShip",uLink.RPCMode.Server,twoPointVector);
-						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
+						PlayerStateChange(PlayerState.DEPLOYED);
 					}
 	
 				}
@@ -203,7 +215,7 @@ public class GC_InGameController : uLink.MonoBehaviour {
 					{
 						Vector3 twoPointVector = new Vector3(hit.point.x,0,hit.point.z);
 						networkView.RPC("SpawnShip",uLink.RPCMode.Server,twoPointVector);
-						PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
+						PlayerStateChange(PlayerState.DEPLOYED);
 					}
 	
 				}
@@ -239,6 +251,50 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	}
 	
 	[RPC]
+	void ShipSet(byte _ID)
+	{
+		print ("Ship set at " + _ID);
+		if(_ID == 0)
+		{
+			
+		}else if (_ID == 1)
+		{
+			placement = Resources.Load("PlacementObj/Fighters/claw") as GameObject;
+			
+			
+		}else if (_ID == 2)
+		{
+			
+			
+		}else if (_ID == 3)
+		{
+			
+			
+		}else if (_ID == 4)
+		{
+			
+		}else if (_ID == 5)
+		{
+			
+			
+		}else if (_ID == 6)
+		{
+			
+			
+		}else if (_ID == 7)
+		{
+			
+		}
+		else if (_ID == 8)
+		{
+			placement = Resources.Load("PlacementObj/Battleships/victus") as GameObject;
+			
+		}
+		
+		PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
+	}
+	
+	[RPC]
 	void TeamSet(byte _ID)
 	{
 		
@@ -246,7 +302,7 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		
 		print ("Team set to " + _ID);
 		playerTeam = _ID;
-		PlayerStateChange(PlayerState.TEAMASSIGNED);
+		PlayerStateChange(PlayerState.SHIPASSIGNMENT);
 		
 		UI._GameTeams.ChangeHideState();
 		

@@ -9,6 +9,7 @@ public struct NetworkProfile {
 	public uLink.NetworkPlayer player;
 	public string name;
 	public byte team;
+	public byte ship;
 	
 }
 
@@ -165,13 +166,12 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		
 		serverDetailsNeedUpdating = true;
 		
-		
+		print ("New state" + currentGameState);
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 		
 		if(currentGameState == GameState.PLAYING)
 		{
@@ -288,13 +288,44 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 			{
 				rotation = Quaternion.Euler(new Vector3(0,0,0));
 			}
-			uLink.Network.Instantiate(playerList[tempKey].player,"otherShip","ownerShip","serverShip",_value.Value,rotation,0,playerList[tempKey].team,playerList[tempKey].name);
+			
+			string shipLocation = "";
+		
+			if(playerList[tempKey].ship == 1)
+			{
+				shipLocation = "Ships/Fighters/claw";
+				
+			}else if (playerList[tempKey].ship == 8)
+			{
+				shipLocation = "Ships/Battleships/victus";
+			}
+			
+			print ("Spawning ship " + shipLocation);
+			
+			uLink.Network.Instantiate(playerList[tempKey].player,shipLocation,_value.Value,rotation,0,playerList[tempKey].team,playerList[tempKey].name);
 			
 		}
 		
 		playerSpawnBuffer.Clear();
 		
 		
+	}
+	
+	[RPC]
+	void ShipSelection(byte _ID,uLink.NetworkMessageInfo _Info) // Sent when a player requests a ship type
+	{
+		if(playerList[_Info.sender.id].ship == 50)
+		{
+			NetworkProfile tmpProf = playerList[_Info.sender.id];
+			
+			tmpProf.ship = _ID;
+			
+			playerList[_Info.sender.id] = tmpProf;
+			
+			networkView.RPC("ShipSet",_Info.sender,_ID);
+			
+			print ("Team currently is " + playerList[_Info.sender.id].team);
+		}
 	}
 	
 	
@@ -305,6 +336,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		playerSpawnBuffer.Add(_Info.sender.id,_Position);
 		
 		Quaternion rotation = Quaternion.identity;
+		
 		if(playerList[_Info.sender.id].team == 1)
 		{
 			rotation = Quaternion.Euler(new Vector3(0,90,0));
@@ -318,10 +350,25 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 			rotation = Quaternion.Euler(new Vector3(0,0,0));
 		}
 		
-		GameObject tmp = uLink.Network.Instantiate(networkView.owner,"shipPlacement","shipPlacement","shipPlacement",_Position,rotation,0);
+		string shipLocation = "";
+		
+		if(playerList[_Info.sender.id].ship == 1)
+		{
+			shipLocation = "PlacementObj/Fighters/claw";
+			
+		}else if (playerList[_Info.sender.id].ship == 8)
+		{
+			shipLocation = "PlacementObj/Battleships/victus";
+		}
+		
+		print ("Spawning placement obj " + shipLocation);
+	
+		GameObject tmp = uLink.Network.Instantiate(networkView.owner,shipLocation,_Position,rotation,0);
 		placements.Add(tmp);
 			
 	}
+	
+	
 	
 	
 	[RPC]
@@ -333,6 +380,8 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	
 
 	}
+	
+	
 	
 	[RPC]	
 	void UserConnected (string _Name,uLink.NetworkMessageInfo _Info)
@@ -346,6 +395,8 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		tempProf.player = _Info.sender;
 		
 		tempProf.team = 0;
+		
+		tempProf.ship = 50;
 		
 		playerList.Add(_Info.sender.id,tempProf);
 		
@@ -393,6 +444,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	[RPC]
 	void AddToRed (uLink.NetworkMessageInfo _Info)
 	{
+		print ("Added to red");
 		byte currentTeam = 1;
 		
 		NetworkProfile tmpProf = playerList[_Info.sender.id];
@@ -411,6 +463,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	[RPC]
 	void AddToBlue (uLink.NetworkMessageInfo _Info)
 	{
+		print ("Added to blue");
 		byte currentTeam = 2;
 		
 		NetworkProfile tmpProf = playerList[_Info.sender.id];
@@ -430,6 +483,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	[RPC]
 	void AddToGreen (uLink.NetworkMessageInfo _Info)
 	{
+		print ("Added to green");
 		byte currentTeam = 3;
 		
 		NetworkProfile tmpProf = playerList[_Info.sender.id];
