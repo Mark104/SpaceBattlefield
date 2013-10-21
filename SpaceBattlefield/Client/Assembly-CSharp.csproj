@@ -58,7 +58,10 @@
      <Compile Include="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs" />
      <Compile Include="Assets\Game\Scripts\Game\EntitySystems\Ship\Base\ShipEntity.cs" />
      <Compile Include="Assets\Game\Scripts\Game\EntitySystems\Ship\FighterEntity.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\BasicFighterMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\Base\ShipMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\BattleshipMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\CruiserMovement.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\JoinTeam.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\SelectShip.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\GameUIManager.cs" />
@@ -68,7 +71,7 @@
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\WSFighterClaw.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\WSFrigateInterceptor.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\Sprite.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\UISpinner.cs" />

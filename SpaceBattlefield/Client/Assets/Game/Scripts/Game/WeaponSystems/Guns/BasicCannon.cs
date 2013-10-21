@@ -13,7 +13,9 @@ public class BasicCannon : Armament {
 	
 	float turretOffset = 1;
 	
-	GameObject bulletType;
+	public GameObject projectile;
+	
+	
 	
 	
 	public override void Start () {
@@ -89,7 +91,7 @@ public class BasicCannon : Armament {
 		{
 			nextFire = (float)uLink.Network.time + fireRate;
 			
-			CFC.SendGunMessage(id,(short)transform.eulerAngles.y,transform.position + (transform.forward * turretOffset),Resources.Load("Bullet/basicCannon") as GameObject,projectileSpeed);
+			CFC.SendGunMessage(id,(short)transform.eulerAngles.y,transform.position + (transform.forward * turretOffset),projectile,projectileSpeed);
 		
 			
 			return true;	
@@ -103,7 +105,7 @@ public class BasicCannon : Armament {
 	
 	public override void ProxyFire (short _Rotation,Vector2 _Position,byte _Team) {
 		
-		GameObject tmpObj =	(GameObject)Instantiate(Resources.Load("Bullet/basicCannon"),new Vector3(_Position.x,0,_Position.y),Quaternion.Euler(0,_Rotation,0));
+		GameObject tmpObj =	(GameObject)Instantiate(projectile,new Vector3(_Position.x,0,_Position.y),Quaternion.Euler(0,_Rotation,0));
 		ClientBullet cb = tmpObj.GetComponent<ClientBullet>();
 		cb.speed = projectileSpeed;
 		cb.team = _Team;

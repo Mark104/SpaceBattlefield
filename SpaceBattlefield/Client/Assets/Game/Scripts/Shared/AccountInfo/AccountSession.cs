@@ -130,7 +130,7 @@ public class AccountSession : uLink.MonoBehaviour {
 		
 		Destroy(loadingScreen);
 			
-		uLink.Network.Connect("192.168.0.4",incPort);
+		uLink.Network.Connect("192.168.0.2",incPort);
 	}
 	
 	void uLink_OnConnectedToServer()

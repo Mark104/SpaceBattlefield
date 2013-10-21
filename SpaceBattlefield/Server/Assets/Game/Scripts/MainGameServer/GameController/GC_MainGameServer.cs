@@ -291,14 +291,19 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 			
 			string shipLocation = "";
 		
-			if(playerList[tempKey].ship == 1)
+			if(playerList[tempKey].ship == 0)
 			{
-				shipLocation = "Ships/Fighters/claw";
+				shipLocation = "Ships/Frigates/bomber";
+				
+			}else if (playerList[tempKey].ship == 1)
+			{
+				shipLocation = "Ships/Frigates/interceptor";
 				
 			}else if (playerList[tempKey].ship == 8)
 			{
-				shipLocation = "Ships/Battleships/victus";
+				shipLocation = "Ships/Battleships/flagship";
 			}
+			
 			
 			print ("Spawning ship " + shipLocation);
 			
@@ -352,13 +357,17 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		
 		string shipLocation = "";
 		
-		if(playerList[_Info.sender.id].ship == 1)
+		if(playerList[_Info.sender.id].ship == 0)
 		{
-			shipLocation = "PlacementObj/Fighters/claw";
+			shipLocation = "PlacementObj/Frigates/bomber";
+			
+		}else if (playerList[_Info.sender.id].ship == 1)	
+		{
+			shipLocation = "PlacementObj/Frigates/interceptor";
 			
 		}else if (playerList[_Info.sender.id].ship == 8)
 		{
-			shipLocation = "PlacementObj/Battleships/victus";
+			shipLocation = "PlacementObj/Battleships/flagship";
 		}
 		
 		print ("Spawning placement obj " + shipLocation);

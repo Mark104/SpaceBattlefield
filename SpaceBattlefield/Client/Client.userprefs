@@ -1,16 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs">
     <Files>
-      <File FileName="Assets\Game\Scripts\Game\EntitySystems\Ship\Base\ShipEntity.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs" Line="244" Column="1" />
-      <File FileName="Assets\Game\Scripts\FrontEnd\Controllers\GC_FrontEnd.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\FrontEnd\UI\Panels\PnlTop.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Shared\Utility\Sprite.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\BasicFighterMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Game\UI\GameUIManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\uLink\Utility Scripts\uLinkSmoothRigidbodyImproved.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\Base\ShipMovement.cs" Line="9" Column="29" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\CruiserMovement.cs" Line="26" Column="19" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" Line="48" Column="4" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\BattleshipMovement.cs" Line="4" Column="32" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" Line="35" Column="3" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\WSFrigateInterceptor.cs" Line="10" Column="3" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" Line="89" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
