@@ -68,10 +68,12 @@
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlDevShipPicker.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameTeams.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameUI.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Frigate\WSFrigateBomber.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Frigate\WSFrigateInterceptor.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Frigate\BasicCannon.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Frigate\PlasmaBomb.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" />
-     <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\WSFrigateInterceptor.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\Sprite.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\UISpinner.cs" />
@@ -195,6 +197,7 @@
      <None Include="Assets\Plugins\uLink\Assembly\uLink.xml" />
      <None Include="Assets\NGUI_Skin_volume_3\Textures\Fonts\Verdana32.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />

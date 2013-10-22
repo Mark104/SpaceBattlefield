@@ -7,6 +7,7 @@ public class ClientBullet : MonoBehaviour {
 	public int speed;
 	float currentLife = 0;
 	public byte team;
+	public byte damage;
 
 	// Use this for initialization
 	void Start () {

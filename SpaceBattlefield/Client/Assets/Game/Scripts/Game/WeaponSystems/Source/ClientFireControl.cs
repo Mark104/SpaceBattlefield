@@ -27,24 +27,10 @@ public class ClientFireControl : uLink.MonoBehaviour {
 		print ("Linked");
 	}
 	
-	public void SendGunMessage(int _ID,short _Rotation,Vector3 _Position,GameObject projectile,int _Speed)
+	public void SendGunMessage(int _ID,short _Rotation,Vector3 _Position)
 	{
 		Vector2 vec2PositionConversion = new Vector2(_Position.x,_Position.z);
 		networkView.RPC("GunFired",uLink.RPCMode.Server,(byte)_ID,_Rotation,vec2PositionConversion);
-		
-		
-		GameObject tmpObj =	(GameObject)Instantiate(projectile,_Position,Quaternion.Euler(0,_Rotation,0));
-		ClientBullet cb = tmpObj.GetComponent<ClientBullet>();
-		cb.speed = _Speed;
-		
-
-		
-		Physics.IgnoreCollision(this.collider,tmpObj.collider);
-		
-		cb.team = SE.shipTeam;
-		
-		cb.tag = "Bullet";
-		
 		
 	}
 	

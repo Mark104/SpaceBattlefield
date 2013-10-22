@@ -13,8 +13,6 @@ public class FrigateMovement : ShipMovement {
 	Quaternion rot;
 	
 	
-	
-	
 	float currentHorizontalForce = 0;
 
 	// Use this for initialization
@@ -75,6 +73,8 @@ public class FrigateMovement : ShipMovement {
 			rigidbody.AddForce(vel,ForceMode.Acceleration);
 		}
 		
+		audio.pitch = rigidbody.velocity.magnitude / maxSpeed;
+		
 		if(currentSendTimer > 0.1f)
 		{
 			networkView.RPC("InputRecived",uLink.RPCMode.Server,rigidbody.velocity,transform.position,rot);
@@ -95,8 +95,8 @@ public class FrigateMovement : ShipMovement {
 	
 	void LateUpdate () {
 		
-		
-		Camera.main.transform.position = transform.position + (Vector3.up * 20);
+		if (networkView.isOwner)
+			Camera.main.transform.position = transform.position + (Vector3.up * 20);
 		
 	
 	}

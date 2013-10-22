@@ -24,8 +24,8 @@ public class ShipEntity : uLink.MonoBehaviour {
 		
 		string playerName = tmpStream.ReadString();
 		
-		//if(!networkView.isOwner)
-		//{
+		if(!networkView.isOwner)
+		{
 			GameObject tmp = Instantiate(Resources.Load("Overlay")) as GameObject;
 			
 	
@@ -33,7 +33,7 @@ public class ShipEntity : uLink.MonoBehaviour {
 			tmp.transform.parent = gameObject.transform;
 			tmp.transform.localPosition = Vector3.zero;
 			
-		//}
+		}
 	}
 	
 	void OnDestroy() {

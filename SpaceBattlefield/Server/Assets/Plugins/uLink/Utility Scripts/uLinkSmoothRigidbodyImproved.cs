@@ -194,7 +194,6 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 
 	void FixedUpdate()
 	{
-		print ("My Velocity is " + rigidbody.velocity);
 		if (networkView.viewID == uLink.NetworkViewID.unassigned)
 		{
 			return;
@@ -230,6 +229,7 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 	public void InputRecived(Vector3 velocity,Vector3 _Position,Quaternion rot,uLink.NetworkMessageInfo info)
 	{
 		velocity = velocity;
+		rigidbody.velocity = velocity;
 		transform.position = _Position;
 		transform.rotation = rot;
 		

@@ -43,22 +43,24 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	public void Respawn()
 	{
 		
-		PlayerStateChange(PlayerState.TEAMASSIGNED);
+		print ("respawning!");
+		
+		PlayerStateChange(PlayerState.AWAITINGDEPLOYMENT);
 		
 		if(playerTeam == 1)
 		{
-			Camera.main.transform.position = new Vector3(-40,20,0); // move to red spawn
+			Camera.main.transform.position = new Vector3(-50,20,0); // move to red spawn
 			
 		}
 		else if (playerTeam == 2)
 		{
-			Camera.main.transform.position = new Vector3(40,20,0); // move to green spawn
+			Camera.main.transform.position = new Vector3(50,20,0); // move to green spawn
 			
 		}
 		else if (playerTeam == 3)
 		{
 			
-			Camera.main.transform.position = new Vector3(0,20,-40); // move to blue spawn
+			Camera.main.transform.position = new Vector3(0,20,-50); // move to blue spawn
 			
 		}
 	}
@@ -182,7 +184,6 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		
 		if(currentPlayerState == PlayerState.AWAITINGDEPLOYMENT)
 		{
-			print ("Awaiting deploy");
 			if(AS.isBot)
 			{
 				RaycastHit hit;
@@ -308,18 +309,18 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		
 		if(playerTeam == 1)
 		{
-			Camera.main.transform.position = new Vector3(-40,20,0); // move to red spawn
+			Camera.main.transform.position = new Vector3(-50,20,0); // move to red spawn
 			
 		}
 		else if (playerTeam == 2)
 		{
-			Camera.main.transform.position = new Vector3(40,20,0); // move to green spawn
+			Camera.main.transform.position = new Vector3(50,20,0); // move to green spawn
 			
 		}
 		else if (playerTeam == 3)
 		{
 			
-			Camera.main.transform.position = new Vector3(0,20,-40); // move to blue spawn
+			Camera.main.transform.position = new Vector3(0,20,50); // move to blue spawn
 			
 		}
 		

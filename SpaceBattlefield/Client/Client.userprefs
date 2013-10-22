@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader">
     <Files>
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\Base\ShipMovement.cs" Line="9" Column="29" />
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\CruiserMovement.cs" Line="26" Column="19" />
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" Line="48" Column="4" />
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\BattleshipMovement.cs" Line="4" Column="32" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" Line="35" Column="3" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\WSFrigateInterceptor.cs" Line="10" Column="3" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\BasicCannon.cs" Line="89" Column="4" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" Line="82" Column="25" />
+      <File FileName="Assets\Game\Scripts\Game\EntitySystems\Ship\FighterEntity.cs" Line="17" Column="36" />
+      <File FileName="Assets\Game\Scripts\Game\Bullet\ClientBullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Shared\Utility\Sprite.cs" Line="18" Column="48" />
+      <File FileName="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\EntitySystems\Ship\Base\ShipEntity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\Frigate\BasicCannon.cs" Line="6" Column="2" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" Line="71" Column="3" />
+      <File FileName="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

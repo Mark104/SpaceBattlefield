@@ -12,9 +12,9 @@ public class FighterEntity : ShipEntity {
 			{
 				if(shipTeam != _Collision.collider.GetComponent<ClientBullet>().team) // was that bulllet from another team?
 				{
-					health -= 1;
+					health -= _Collision.collider.GetComponent<ClientBullet>().damage;
 					
-					print ("Lost health");
+					print ("Lost health " + health);
 					
 					if(health <= 0)
 					{

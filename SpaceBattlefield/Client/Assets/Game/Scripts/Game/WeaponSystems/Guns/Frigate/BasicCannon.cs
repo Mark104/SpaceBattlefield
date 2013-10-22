@@ -4,22 +4,15 @@ using System.Collections;
 
 public class BasicCannon : Armament {
 	
-	float damage;
-	float fireRate = 0.2f;
-	float nextFire = 0;
+
 	float turnRate = 1;
 	int turnLimit = 30;
-	int projectileSpeed = 20;
-	
-	float turretOffset = 1;
-	
-	public GameObject projectile;
-	
-	
 	
 	
 	public override void Start () {
 	
+		damage = 1;
+		
 		base.Start();
 		
 	}
@@ -84,39 +77,21 @@ public class BasicCannon : Armament {
 	}
 	
 	
-	
 	public override bool Fire () {
-			
-		if(nextFire < (float)uLink.Network.time)
-		{
-			nextFire = (float)uLink.Network.time + fireRate;
-			
-			CFC.SendGunMessage(id,(short)transform.eulerAngles.y,transform.position + (transform.forward * turretOffset),projectile,projectileSpeed);
-		
-			
-			return true;	
-		}
-		else
-		{
-			return false;
-		}
 	
+		return	base.Fire();
+		
 	}
 	
 	public override void ProxyFire (short _Rotation,Vector2 _Position,byte _Team) {
 		
-		GameObject tmpObj =	(GameObject)Instantiate(projectile,new Vector3(_Position.x,0,_Position.y),Quaternion.Euler(0,_Rotation,0));
-		ClientBullet cb = tmpObj.GetComponent<ClientBullet>();
-		cb.speed = projectileSpeed;
-		cb.team = _Team;
 		
-		Physics.IgnoreCollision(transform.root.gameObject.collider,tmpObj.collider);
+		base.ProxyFire(_Rotation,_Position,_Team);
+		
 	}
 	
 	
 	public override string Status () {
-		
-		
 		
 		
 		return "test";
