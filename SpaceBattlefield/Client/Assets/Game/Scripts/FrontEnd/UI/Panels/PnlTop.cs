@@ -11,7 +11,7 @@ public class PnlTop : UIPanelController {
 	void Awake () {
 		
 		hidePosition = new Vector3(0,20,0);
-		showPosition = new Vector3(0,-300,0);
+		showPosition = new Vector3(0,-425.2716f,0);
 		currentlyHidden = true;
 		
 	}
