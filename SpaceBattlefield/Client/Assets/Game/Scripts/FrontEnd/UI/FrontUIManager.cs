@@ -5,6 +5,7 @@ public class FrontUIManager : MonoBehaviour {
 	
 	public PnlLogin _PnlLogin;
 	public PnlTop _PnlTop;
+	public GameObject _PnlBack;
 	
 	public void LogedIn()
 	{

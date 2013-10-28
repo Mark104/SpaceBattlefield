@@ -77,8 +77,9 @@ public class AccountSession : uLink.MonoBehaviour {
 	public void JoinServer(string _Host,int _Port)
 	{
 		//uLink.Network.Connect("25.150.103.245",_Port);
-		StartCoroutine(LoadLevelInBackground());
 		incPort= _Port;
+		StartCoroutine(LoadLevelInBackground());
+		
 		
 	}
 
@@ -123,8 +124,10 @@ public class AccountSession : uLink.MonoBehaviour {
 	IEnumerator  LoadLevelInBackground()
 	{
 		loadingScreen = Instantiate(Resources.Load("LoadingScreen")) as GameObject;
-		
+
 		DontDestroyOnLoad(loadingScreen);
+		
+		yield return new WaitForSeconds(1.5f);
 		
 		yield return Application.LoadLevelAsync(1);
 		

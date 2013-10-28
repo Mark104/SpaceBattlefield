@@ -72,6 +72,10 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	
 	Dictionary<int,Vector3> playerSpawnBuffer = new Dictionary<int, Vector3>();
 	
+	int redTeamCount = 0;
+	int blueTeamCount = 0;
+	int greenTeamCount = 0;
+	
 	List<GameObject> placements = new List<GameObject>();
 	
 	
@@ -83,6 +87,11 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	
 	void ClearTeamsAndRestart()
 	{
+		
+		redTeamCount = 0;
+		blueTeamCount = 0;
+		greenTeamCount = 0;
+		
 		List<string> unassignedList = new List<string>();
 		List<string> redList = new List<string>();
 		List<string> blueList = new List<string>();
@@ -395,7 +404,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	[RPC]	
 	void UserConnected (string _Name,uLink.NetworkMessageInfo _Info)
 	{	
-		
+
 		print ("User" + _Name + " connected");
 		NetworkProfile tempProf = new NetworkProfile();
 
@@ -448,62 +457,78 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		networkView.RPC("ServerStatus",_Info.sender,(short)currentGameState,currentGameTimer,startGameTime,roundTime,resultsTime);
 		
 		networkView.RPC("ServerTeams",_Info.sender,1,unassignedList.ToArray(),redList.ToArray(),blueList.ToArray(),greenList.ToArray());
+
+		
+		
+		if(redTeamCount <= blueTeamCount && redTeamCount <= greenTeamCount)
+		{
+			AddToRed(_Info.sender);
+		} else if (blueTeamCount <= redTeamCount && blueTeamCount <= greenTeamCount)
+		{
+			AddToBlue(_Info.sender);
+		} else
+		{
+			AddToGreen(_Info.sender);
+		}
+
 	}
 	
-	[RPC]
-	void AddToRed (uLink.NetworkMessageInfo _Info)
+	
+
+	void AddToRed (uLink.NetworkPlayer _Player)
 	{
+		redTeamCount++;
 		print ("Added to red");
 		byte currentTeam = 1;
 		
-		NetworkProfile tmpProf = playerList[_Info.sender.id];
+		NetworkProfile tmpProf = playerList[_Player.id];
 		
 		byte lastTeam = tmpProf.team;
 		
 		tmpProf.team = 1;
 		
-		playerList[_Info.sender.id] = tmpProf;
+		playerList[_Player.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",_Info.sender,currentTeam);
+		networkView.RPC("TeamSet",_Player,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 	}
-	
-	[RPC]
-	void AddToBlue (uLink.NetworkMessageInfo _Info)
+
+	void AddToBlue (uLink.NetworkPlayer _Player)
 	{
+		blueTeamCount++;
 		print ("Added to blue");
 		byte currentTeam = 2;
 		
-		NetworkProfile tmpProf = playerList[_Info.sender.id];
+		NetworkProfile tmpProf = playerList[_Player.id];
 		
 		byte lastTeam = tmpProf.team;
 		
 		tmpProf.team = 2;
 		
-		playerList[_Info.sender.id] = tmpProf;
+		playerList[_Player.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",_Info.sender,currentTeam);
+		networkView.RPC("TeamSet",_Player,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 
 	}
 	
-	[RPC]
-	void AddToGreen (uLink.NetworkMessageInfo _Info)
+	void AddToGreen (uLink.NetworkPlayer _Player)
 	{
+		greenTeamCount++;
 		print ("Added to green");
 		byte currentTeam = 3;
 		
-		NetworkProfile tmpProf = playerList[_Info.sender.id];
+		NetworkProfile tmpProf = playerList[_Player.id];
 		
 		byte lastTeam = tmpProf.team;
 		
 		tmpProf.team = 3;
 		
-		playerList[_Info.sender.id] = tmpProf;
+		playerList[_Player.id] = tmpProf;
 		
-		networkView.RPC("TeamSet",_Info.sender,currentTeam);
+		networkView.RPC("TeamSet",_Player,currentTeam);
 	
 		//networkView.RPC("UpdatePlayerList",uLink.RPCMode.Others,currentTeam,playerList[_Info.sender.id].name,lastTeam);
 		
@@ -522,6 +547,17 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	void uLink_OnPlayerDisconnected(uLink.NetworkPlayer player) {
 		
 		playerCount--; //Player count goes down by one
+		
+		if(playerList[player.id].team == 1)
+		{
+			redTeamCount--;
+		}else if (playerList[player.id].team == 2)
+		{
+			blueTeamCount--;
+		}else if (playerList[player.id].team == 3)
+		{
+			greenTeamCount--;	
+		}
 		
 		playerList.Remove(player.id);
 		

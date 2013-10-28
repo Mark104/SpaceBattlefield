@@ -245,6 +245,9 @@ public class GC_FrontEnd : uLink.MonoBehaviour {
 	
 	public void JoinServer()
 	{
+		
+		UI._PnlTop.ChangeHideState();
+		Destroy(UI._PnlBack);
 		servers = ServerRegistry.GetServers();
 		
 		foreach(ServerInfo _Info in servers)

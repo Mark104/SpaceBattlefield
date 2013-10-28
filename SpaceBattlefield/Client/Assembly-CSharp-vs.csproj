@@ -63,11 +63,14 @@
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\CruiserMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\JoinTeam.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\NewBehaviourScript.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\EventSenders\SelectShip.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\GameUIManager.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlDevShipPicker.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameInfo.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameTeams.cs" />
      <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlGameUI.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\UI\Panels\pnlShipSelection.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Frigate\WSFrigateBomber.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Frigate\WSFrigateInterceptor.cs" />
      <Compile Include="Assets\Game\Scripts\Game\WeaponSystems\Guns\Base\Armament.cs" />
@@ -77,6 +80,7 @@
      <Compile Include="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\Sprite.cs" />
      <Compile Include="Assets\Game\Scripts\Shared\Utility\UISpinner.cs" />
+     <Compile Include="Assets\Game\Scripts\Shared\Utility\UIUpdater.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\ChatInput.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DownloadTexture.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\Other\DragDropContainer.cs" />

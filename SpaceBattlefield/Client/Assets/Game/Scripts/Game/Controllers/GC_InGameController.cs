@@ -68,7 +68,9 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	public void AttemptShipSelection(byte _ID)
 	{
 		networkView.RPC("ShipSelection",uLink.RPCMode.Server,_ID);
-		UI._DevShipPicker.ChangeHideState();
+		
+		UI._GameInfo.ChangeHideState();
+		UI._ShipSelection.ChangeHideState();
 	}
 	
 	public void Initalize()
@@ -91,15 +93,15 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		else if (_NewState == PlayerState.TEAMASSIGNED)
 		{
 			
-			
 		}
 		else if (_NewState == PlayerState.SHIPASSIGNMENT)
 		{
-			UI._DevShipPicker.ChangeHideState();
+			//UI._DevShipPicker.ChangeHideState();
 		}
 		else if (_NewState == PlayerState.AWAITINGDEPLOYMENT)
 		{
-			
+	
+			UI.EnterGameUIMode();
 		}
 		else if (_NewState == PlayerState.DEPLOYED)
 		{
@@ -298,14 +300,15 @@ public class GC_InGameController : uLink.MonoBehaviour {
 	[RPC]
 	void TeamSet(byte _ID)
 	{
-		
+		UI._ShipSelection.TeamIs(_ID);
 		AS.currentTeam = _ID;
 		
 		print ("Team set to " + _ID);
 		playerTeam = _ID;
 		PlayerStateChange(PlayerState.SHIPASSIGNMENT);
 		
-		UI._GameTeams.ChangeHideState();
+		UI._GameInfo.ChangeHideState();
+		UI._ShipSelection.ChangeHideState();
 		
 		if(playerTeam == 1)
 		{
@@ -362,7 +365,7 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		}
 		else if (currentServerState == GameState.RESULTS)
 		{
-			UI._GameTeams.ChangeHideState();
+			//UI._GameTeams.ChangeHideState();
 			currentTimer = resultsTime - (uLink.Network.time - _Info.timestamp);
 		}
 		
