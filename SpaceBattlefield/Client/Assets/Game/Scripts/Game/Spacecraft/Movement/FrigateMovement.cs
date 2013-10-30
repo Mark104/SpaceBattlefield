@@ -75,7 +75,7 @@ public class FrigateMovement : ShipMovement {
 		
 		audio.pitch = rigidbody.velocity.magnitude / maxSpeed;
 		
-		if(currentSendTimer > 0.1f)
+		if(currentSendTimer > 0.05f)
 		{
 			networkView.RPC("InputRecived",uLink.RPCMode.Server,rigidbody.velocity,transform.position,rot);
 			storedForce = Vector3.zero;

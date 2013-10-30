@@ -228,7 +228,7 @@ public class uLinkSmoothRigidbodyImproved : uLink.MonoBehaviour
 	[RPC]
 	public void InputRecived(Vector3 velocity,Vector3 _Position,Quaternion rot,uLink.NetworkMessageInfo info)
 	{
-		velocity = velocity;
+		//velocity = velocity;
 		rigidbody.velocity = velocity;
 		transform.position = _Position;
 		transform.rotation = rot;

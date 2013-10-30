@@ -55,7 +55,7 @@ public class AccountSession : uLink.MonoBehaviour {
 		print ("Connecting");
 		
 		//Lobby.ConnectAsClient("192.168.0.3",7050);
-		
+		//uLink.Network.Connect("108.161.129.134",6050);
 	}
 	
 	public void EnteredWaitingRoom (GC_FrontEnd _GC_FrontEnd)
@@ -133,7 +133,7 @@ public class AccountSession : uLink.MonoBehaviour {
 		
 		Destroy(loadingScreen);
 			
-		uLink.Network.Connect("192.168.0.2",incPort);
+		uLink.Network.Connect("108.161.129.134",incPort);
 	}
 	
 	void uLink_OnConnectedToServer()

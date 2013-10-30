@@ -21,7 +21,7 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 	
 	short minimumPlayers = -1;
 	short startGameTime = 20; // In seconds
-	short roundTime = 50; // In seconds
+	short roundTime = 500; // In seconds
 	short resultsTime = 2; // In seconds
 	short idleTIme = 6; // In seconds
 	float waveInterval = 5;
