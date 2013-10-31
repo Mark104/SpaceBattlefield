@@ -307,7 +307,10 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 			}else if (playerList[tempKey].ship == 1)
 			{
 				shipLocation = "Ships/Frigates/interceptor";
-				
+			}else if (playerList[tempKey].ship == 2)
+			{
+				shipLocation = "Ships/Frigates/gunship";
+					
 			}else if (playerList[tempKey].ship == 8)
 			{
 				shipLocation = "Ships/Battleships/flagship";
@@ -373,6 +376,10 @@ public class GC_MainGameServer : uLink.MonoBehaviour {
 		}else if (playerList[_Info.sender.id].ship == 1)	
 		{
 			shipLocation = "PlacementObj/Frigates/interceptor";
+			
+		}else if (playerList[_Info.sender.id].ship == 2)	
+		{
+			shipLocation = "PlacementObj/Frigates/gunship";
 			
 		}else if (playerList[_Info.sender.id].ship == 8)
 		{

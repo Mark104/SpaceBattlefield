@@ -25,13 +25,14 @@ public class pnlShipSelection : UIPanelController {
 			teamBackCol.a = 32;
 		}else if (_Team == 2)
 		{
-			TeamTitle.text = "You are BLUE";
-			teamBackCol = Color.blue;
-			teamBackCol.a = 32;
-		}else if (_Team == 3)
-		{
 			TeamTitle.text = "You are GREEN";
 			teamBackCol = Color.green;
+			teamBackCol.a = 32;
+			
+		}else if (_Team == 3)
+		{
+			TeamTitle.text = "You are BLUE";
+			teamBackCol = Color.blue;
 			teamBackCol.a = 32;
 		}
 		
