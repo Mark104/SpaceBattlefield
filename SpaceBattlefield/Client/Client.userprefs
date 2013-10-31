@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Game\Network\NetworkPrediction.cs">
     <Files>
-      <File FileName="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" Line="13" Column="2" />
-      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" Line="78" Column="29" />
-      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" Line="84" Column="2" />
+      <File FileName="Assets\Game\Scripts\Game\Network\NetworkPrediction.cs" Line="50" Column="137" />
+      <File FileName="Assets\Game\Scripts\Shared\AccountInfo\AccountSession.cs" Line="133" Column="3" />
+      <File FileName="Assets\Game\Scripts\Game\Spacecraft\Movement\FrigateMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Game\WeaponSystems\Source\ClientFireControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Plugins\uLink\Utility Scripts\uLinkSmoothCharacter.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

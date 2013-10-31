@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\MainGameServer\GameController\GC_MainGameServer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\MainGameServer\Network\NetworkPrediction.cs">
     <Files>
       <File FileName="Assets\Game\Scripts\MainGameServer\GameController\GC_MainGameServer.cs" Line="24" Column="23" />
-      <File FileName="Assets\Plugins\uLink\Utility Scripts\uLinkSmoothRigidbodyImproved.cs" Line="231" Column="5" />
+      <File FileName="Assets\Plugins\uLink\Utility Scripts\uLinkSmoothRigidbodyImproved.cs" Line="120" Column="38" />
+      <File FileName="Assets\Game\Scripts\MainGameServer\Network\NetworkPrediction.cs" Line="21" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

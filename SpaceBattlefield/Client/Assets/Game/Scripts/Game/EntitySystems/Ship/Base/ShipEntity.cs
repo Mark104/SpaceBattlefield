@@ -38,9 +38,11 @@ public class ShipEntity : uLink.MonoBehaviour {
 	
 	void OnDestroy() {
 		
-		print ("I be dead laddie, respawning!");
-		GameObject.FindGameObjectWithTag("GameController").GetComponent<GC_InGameController>().Respawn();
-		
+		if(networkView.isOwner)
+		{
+			print ("I be dead laddie, respawning!");
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<GC_InGameController>().Respawn();
+		}	
 		
 	}
 	

@@ -58,6 +58,7 @@
      <Compile Include="Assets\Game\Scripts\Game\Controllers\GC_InGameController.cs" />
      <Compile Include="Assets\Game\Scripts\Game\EntitySystems\Ship\Base\ShipEntity.cs" />
      <Compile Include="Assets\Game\Scripts\Game\EntitySystems\Ship\FighterEntity.cs" />
+     <Compile Include="Assets\Game\Scripts\Game\Network\NetworkPrediction.cs" />
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\Base\ShipMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\BattleshipMovement.cs" />
      <Compile Include="Assets\Game\Scripts\Game\Spacecraft\Movement\CruiserMovement.cs" />
