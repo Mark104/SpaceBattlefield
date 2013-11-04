@@ -46,8 +46,10 @@ public class NetworkPrediction : uLink.MonoBehaviour {
 				
 				float extrapolationAmount = Vector2.Distance(extrapolatedPosition,new Vector2(transform.position.x,transform.position.z));
 				
-				print ("Distance to extrapolated point is " + extrapolationAmount);
-				transform.position = Vector3.Lerp(transform.position,new Vector3(extrapolatedPosition.x,0,extrapolatedPosition.y),Time.deltaTime * 4);
+				if(extrapolationAmount > thresshold * 0.1f)
+				{
+					transform.position = Vector3.Lerp(transform.position,new Vector3(extrapolatedPosition.x,0,extrapolatedPosition.y),Time.deltaTime * 3);
+				}
 			}
 			
 			rigidbody.velocity = new Vector3(_Vel.x,0,_Vel.y);
