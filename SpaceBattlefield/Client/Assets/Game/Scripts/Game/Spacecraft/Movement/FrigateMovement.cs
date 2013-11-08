@@ -18,6 +18,8 @@ public class FrigateMovement : ShipMovement {
 	Vector2 MouseInput;
 	float HorizontalInput;
 	float VerticalInput;
+	
+	
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +52,8 @@ public class FrigateMovement : ShipMovement {
 	}
 	
 	
+	
+	
 	// Update is called once per frame
 	void Update () {
 		
@@ -64,22 +68,31 @@ public class FrigateMovement : ShipMovement {
 			inputValue = -0.25f;
 		}
 		
+		
+		
 		vel = (transform.forward * acceleration) * inputValue;
 			
 		rot = Quaternion.Lerp(rot,Quaternion.LookRotation(relativeVector,transform.up),Time.deltaTime * rotationSpeed);
 			
-		float angle = Quaternion.Angle(transform.rotation,Quaternion.LookRotation(relativeVector,transform.up));
+		float angle = 0;
 		
-		angle = angle / 60;	
-			
-		if(angle > 1)
-			angle = 1;
-		
-		if(Vector3.Dot(transform.right,relativeVector) < 0)
+		if(visualRotationAllowed)
 		{
-			angle = -angle;
+			angle = Quaternion.Angle(transform.rotation,Quaternion.LookRotation(relativeVector,transform.up));
+			
+			angle = angle / 60;	
+				
+			if(angle > 1)
+				angle = 1;
+			
+			if(Vector3.Dot(transform.right,relativeVector) < 0)
+			{
+				angle = -angle;
+			}
+		
+			
 		}
-	
+		
 		if(rigidbody.velocity.magnitude < maxSpeed)
 		{
 			rigidbody.AddForce(vel * Time.deltaTime,ForceMode.Acceleration);

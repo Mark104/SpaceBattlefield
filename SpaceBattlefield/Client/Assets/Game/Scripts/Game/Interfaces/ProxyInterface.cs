@@ -6,6 +6,7 @@ public class ProxyInterface : InputInterface {
 	
 	Quaternion destRotation;
 	Vector3 lerpPosition;
+	float lerpStrength = 0;
 	
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class ProxyInterface : InputInterface {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		
 		transform.rotation = Quaternion.Lerp(transform.rotation,destRotation,0.2f);
 		
@@ -32,7 +33,7 @@ public class ProxyInterface : InputInterface {
 		double timeDifference = uLink.Network.time - _TimeStamp;
 		Vector2 extrapolatedPosition = _Pos + new Vector2((float)(_Vel.x * timeDifference),(float)(_Vel.y * timeDifference));
 		
-		float dis = Vector2.Distance(_Pos,extrapolatedPosition);
+		float dis = Vector2.Distance(_Pos,new Vector2(transform.position.x,transform.position.z));
 		
 		if(dis > 2)
 		{
@@ -42,7 +43,9 @@ public class ProxyInterface : InputInterface {
 		else
 		{
 			lerpPosition = new Vector3(extrapolatedPosition.x,0,extrapolatedPosition.y);	
-			transform.position = Vector3.Lerp(transform.position,lerpPosition,dis / 2);
+			lerpStrength = dis / 2;
+			transform.position = Vector3.Lerp(transform.position,lerpPosition,lerpStrength);
+			
 		}
 		
 		Vector3 difference = new Vector3(_Vel.x,0,_Vel.y) -	rigidbody.velocity;	

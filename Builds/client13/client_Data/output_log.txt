@@ -1,0 +1,1666 @@
+Initialize engine version: 4.2.1f4 (4d30acc925c2)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1151]
+    Renderer: ATI Radeon HD 5450
+    Vendor:   ATI
+    VRAM:     1398 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 DF24=1 INTZ=1 RAWZ=0 NULL=1 RESZ=1 SlowINTZ=1
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Jboy.Core.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Jboy.Core.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Jboy.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Jboy.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uGameDB.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uGameDB.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uLink.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uLink.dll into Unity Child Domain
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uLobby.dll (this message is harmless)
+Loading C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\uLobby.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\System.Core.dll (this message is harmless)
+Command args are C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client.exe
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Platform assembly: C:\Users\RapidUser\Desktop\spacegame\V7\SpaceBattlefield\Builds\client13\client_Data\Managed\Boo.Lang.dll (this message is harmless)
+Connecting
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Connected to MasterServer
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Failed to register account with name Mark-Bot, error: NameAlreadyRegistered
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Attempting login with Mark-Bot
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Attempting Connect with25.150.103.245 on port 6050
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Data updated with PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+UnloadTime: 3.008733 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 732.
+Total: 5.283112 ms (FindLiveObjects: 0.082285 ms CreateObjectMapping: 0.029622 ms MarkObjects: 4.208277 ms  DeleteObjects: 0.059977 ms)
+
+Sending connect message with name Mark-Bot
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Called
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Server changed to PLAYING
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+No receiver found for RPC 'ServerTeams' at uLinkNetworkView "GameController" (Manual ViewID 2)
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Team set to 2
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+State set to SHIPASSIGNMENT
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Ship set at 0
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Destroying background
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+State set to AWAITINGDEPLOYMENT
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+State set to DEPLOYED
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 62)
+
+AFTER HIM
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Lost health 9
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Lost health 8
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Hit thresshold
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Lost health 7
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Lost health 6
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Lost health -4
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Death message sent
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+I be dead laddie, respawning!
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+respawning!
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Destroying background
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+State set to AWAITINGDEPLOYMENT
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+State set to DEPLOYED
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Linked
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+Look rotation viewing vector is zero
+ 
+(Filename:  Line: 62)
+
+AFTER HIM
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+No receiver found for RPC 'RemovePlayerFromList' at uLinkNetworkView "GameController" (Manual ViewID 2)
+ 
+(Filename: C:/BuildAgent/work/cac08d8a5e25d4cb/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 54)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:get_transform ()
+  at BotInterface.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

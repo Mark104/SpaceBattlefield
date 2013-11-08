@@ -174,12 +174,9 @@ public class GC_InGameController : uLink.MonoBehaviour {
 		{
 			if(AS.isBot && botReactionTimer > 2)
 			{
-				if(currentPlayerState == PlayerState.TEAMSELECT)
+				if(currentPlayerState != PlayerState.DEPLOYED)
 				{
-					
-					JoinAttempt((byte)Random.Range(1,3));
-					botReactionTimer = 0;
-					
+					AttemptShipSelection(0);
 				}	
 			}
 		}
