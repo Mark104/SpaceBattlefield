@@ -47,6 +47,7 @@
      <Compile Include="Assets\Game\Scripts\MainGameServer\EntitySystems\Ship\Base\ShipEntity.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\EntitySystems\Ship\FighterEntity.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\GameController\GC_MainGameServer.cs" />
+     <Compile Include="Assets\Game\Scripts\MainGameServer\Network\InputChecker.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\Network\NetworkPrediction.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\Base\ServerFireController.cs" />
      <Compile Include="Assets\Game\Scripts\MainGameServer\WeaponSystems\Guns\Base\Armament.cs" />

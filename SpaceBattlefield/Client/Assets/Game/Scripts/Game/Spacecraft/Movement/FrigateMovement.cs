@@ -14,10 +14,19 @@ public class FrigateMovement : ShipMovement {
 	
 	
 	float currentHorizontalForce = 0;
+	
+	Vector2 MouseInput;
+	float HorizontalInput;
+	float VerticalInput;
 
 	// Use this for initialization
 	void Start () {
 		
+		MouseInput = Vector2.zero;
+		HorizontalInput = 0;
+		VerticalInput = 0;
+		
+		/*
 		AS = GameObject.FindGameObjectWithTag("AccountSession").GetComponent<AccountSession>();
 		
 		
@@ -27,25 +36,28 @@ public class FrigateMovement : ShipMovement {
 			Destroy(this);	
 			
 		}
+		*/
 		
 	}
 	
+	public override void ProvideInput(Vector2 _MouseInput,float _HorizontalInput,float _VerticalInput)
+	{
+	
+		MouseInput = _MouseInput;
+		HorizontalInput = _HorizontalInput;
+		VerticalInput = _VerticalInput;
+
+	}
+	
+	
 	// Update is called once per frame
 	void Update () {
-
+		
+		
 		Vector3 relativeVector;
-		
-		if(AS.isBot)
-		{
-			relativeVector = transform.forward;
-		}
-		else
-		{
-			relativeVector = new Vector3(Input.mousePosition.x - (Screen.width * 0.5f),0,Input.mousePosition.y - (Screen.height * 0.5f));
-			relativeVector.Normalize();
-		}
-		
-		float inputValue = Input.GetAxis("Vertical");
+		relativeVector = new Vector3(MouseInput.x,0,MouseInput.y);
+	
+		float inputValue = VerticalInput;
 		
 		if(inputValue < -0.25f)
 		{
@@ -70,34 +82,35 @@ public class FrigateMovement : ShipMovement {
 	
 		if(rigidbody.velocity.magnitude < maxSpeed)
 		{
-			rigidbody.AddForce(vel,ForceMode.Acceleration);
+			rigidbody.AddForce(vel * Time.deltaTime,ForceMode.Acceleration);
 		}
 		
 		audio.pitch = rigidbody.velocity.magnitude / maxSpeed;
-		
-		if(currentSendTimer > 0.05f)
-		{
-			networkView.RPC("InputRecived",uLink.RPCMode.Server,rigidbody.velocity,transform.position,rot);
-			storedForce = Vector3.zero;
-			currentSendTimer = 0;
-			
-		}
-		else
-		{
-			currentSendTimer += Time.deltaTime;	
-		}
-		
+	
 		transform.rotation = rot;
 		
 		transform.eulerAngles = new Vector3(0,transform.eulerAngles.y,60 * -angle);
+		
+		
+		if(currentSendTimer > 0.02f)
+		{
+			Vector2 Pos = new Vector2(transform.position.x,transform.position.z);
+			Vector2 Vel = new Vector2(rigidbody.velocity.x,rigidbody.velocity.z);
+			short Rot = (short)transform.localEulerAngles.y;
+			networkView.RPC("SendInput",uLink.RPCMode.Server,MouseInput,Pos,Vel,Rot);
+			currentSendTimer = 0;
+		}
+		else
+		{
+			currentSendTimer += Time.deltaTime;
+		}
 
 	}
 	
 	void LateUpdate () {
 		
 		if (networkView.isOwner)
-			Camera.main.transform.position = transform.position + (Vector3.up * 20);
-		
+			Camera.main.transform.position = transform.position + (Vector3.up * 25);		
 	
 	}
 

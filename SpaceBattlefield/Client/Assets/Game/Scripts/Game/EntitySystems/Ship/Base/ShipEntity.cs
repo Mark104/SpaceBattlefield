@@ -12,6 +12,27 @@ public class ShipEntity : uLink.MonoBehaviour {
 	
 	void Awake (){
 		
+		
+		if(networkView.isOwner)
+		{
+			if(!GameObject.FindGameObjectWithTag("AccountSession").GetComponent<AccountSession>().isBot)
+			{
+				gameObject.AddComponent<PlayerInterface>();
+			}
+			else
+			{
+				gameObject.AddComponent<BotInterface>();
+			}
+		}
+		else
+		{
+			gameObject.AddComponent<ProxyInterface>();
+		}
+		
+
+		
+		
+		
 	}
 	
 	void uLink_OnNetworkInstantiate(uLink.NetworkMessageInfo info) {
